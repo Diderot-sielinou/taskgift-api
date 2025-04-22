@@ -1,6 +1,6 @@
-import { query } from "../config/db";
-import logger from "../utils/logger";
-import bcrypt from "bcrypt"
+import { query } from "../config/db.js";
+import logger from "../utils/logger.js";
+import bcrypt from "bcryptjs"
 
 const HASH_SALT = 10
 
