@@ -10,6 +10,7 @@ import winstonLogger from "./utils/logger.js";
 
 import indexRouter from "./routes/index.js";
 import usersRouter from "./routes/users.js";
+import authRouter from "./routes/auth.js"
 
 const app = express();
 const filename = fileURLToPath(import.meta.url);
@@ -24,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(join(__dirname, "public")));
 
 app.use("/", indexRouter);
+app.use("/auth",authRouter)
 app.use("/users", usersRouter);
 
 // catch 404 and forward to error handler
